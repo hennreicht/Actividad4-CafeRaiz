@@ -7,16 +7,16 @@
   --cafe-light:  #EDE0C8;
   --grey-mid:    #888888;
 }
-
+ 
 /* ── Base ───────────────────────────────────────────────────────────────── */
 * { box-sizing: border-box; }
-
+ 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #222;
   background: #fff;
 }
-
+ 
 /* ── Navbar ─────────────────────────────────────────────────────────────── */
 #navbar {
   background-color: var(--cafe-dark);
@@ -28,19 +28,21 @@ body {
   box-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 .navbar-brand { color: var(--cafe-gold) !important; letter-spacing: 0.5px; }
-.nav-link {
+ 
+/* Solo aplica el blanco a los nav-link DENTRO del navbar */
+#navbar .nav-link {
   color: rgba(255,255,255,0.85) !important;
   font-weight: 500;
   padding: 0.4rem 0.8rem !important;
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
 }
-.nav-link:hover,
-.nav-link.active {
+#navbar .nav-link:hover,
+#navbar .nav-link.active {
   color: #fff !important;
   background: rgba(201, 168, 76, 0.2);
 }
-
+ 
 /* ── Buttons ─────────────────────────────────────────────────────────────── */
 .btn-cafe {
   background-color: var(--cafe-brown);
@@ -68,7 +70,7 @@ body {
   background: var(--cafe-brown);
   color: #fff;
 }
-
+ 
 /* ── Hero ────────────────────────────────────────────────────────────────── */
 .hero {
   min-height: 100vh;
@@ -95,14 +97,14 @@ body {
   color: var(--cafe-gold);
   font-weight: 600;
 }
-
+ 
 /* ── Page header (inner pages) ───────────────────────────────────────────── */
 .page-header {
   min-height: 260px;
   padding-top: 80px;
   background: linear-gradient(135deg, var(--cafe-dark) 0%, var(--cafe-brown) 100%);
 }
-
+ 
 /* ── Section tag ─────────────────────────────────────────────────────────── */
 .section-tag {
   font-size: 0.8rem;
@@ -112,10 +114,10 @@ body {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-
+ 
 /* ── Backgrounds ─────────────────────────────────────────────────────────── */
 .bg-cream { background-color: var(--cafe-cream); }
-
+ 
 /* ── Feature cards ───────────────────────────────────────────────────────── */
 .feature-card {
   background: #fff;
@@ -128,7 +130,7 @@ body {
   box-shadow: 0 8px 24px rgba(107,63,42,0.14);
 }
 .feature-icon { font-size: 2.5rem; }
-
+ 
 /* ── About image placeholder ─────────────────────────────────────────────── */
 .about-img-placeholder {
   background: var(--cafe-light);
@@ -136,7 +138,7 @@ body {
   min-height: 320px;
   border: 2px dashed var(--cafe-gold);
 }
-
+ 
 /* ── Product cards ───────────────────────────────────────────────────────── */
 .product-card {
   background: #fff;
@@ -159,11 +161,11 @@ body {
   color: var(--cafe-brown);
   font-size: 1rem;
 }
-
+ 
 /* ── Menu tabs ───────────────────────────────────────────────────────────── */
 .menu-tabs { border-bottom: 2px solid var(--cafe-light); }
 .menu-tabs .nav-link {
-  color: #555555;
+  color: #555555 !important;
   font-weight: 600;
   border: none;
   border-bottom: 3px solid transparent;
@@ -171,15 +173,14 @@ body {
   padding: 0.6rem 1.2rem;
   background: transparent !important;
   transition: color 0.2s, border-color 0.2s;
-  opacity: 1 !important; visibility: visible !important;
 }
-.menu-tabs .nav-link:hover { color: var(--cafe-brown); }
+.menu-tabs .nav-link:hover { color: var(--cafe-brown) !important; }
 .menu-tabs .nav-link.active {
   color: var(--cafe-brown) !important;
   border-bottom-color: var(--cafe-brown);
   background: transparent !important;
 }
-
+ 
 /* ── Mission/Vision cards ────────────────────────────────────────────────── */
 .mv-card {
   background: #fff;
@@ -188,7 +189,7 @@ body {
   box-shadow: 0 2px 12px rgba(107,63,42,0.07);
 }
 .mv-icon { font-size: 2rem; }
-
+ 
 /* ── Value cards ─────────────────────────────────────────────────────────── */
 .value-card {
   background: #fff;
@@ -198,12 +199,12 @@ body {
 }
 .value-card:hover { transform: translateY(-3px); }
 .value-icon { font-size: 2rem; }
-
+ 
 /* ── CTA section ─────────────────────────────────────────────────────────── */
 .cta-section {
   background: linear-gradient(135deg, var(--cafe-dark) 0%, var(--cafe-brown) 100%);
 }
-
+ 
 /* ── Contact form ────────────────────────────────────────────────────────── */
 .form-control-cafe {
   border: 1.5px solid #ddd;
@@ -216,14 +217,14 @@ body {
   box-shadow: 0 0 0 3px rgba(107,63,42,0.1);
   outline: none;
 }
-
+ 
 /* ── Contact info card ───────────────────────────────────────────────────── */
 .contact-info-card {
   background: var(--cafe-cream);
   border-radius: 12px;
 }
 .contact-icon { font-size: 1.4rem; }
-
+ 
 /* ── Map placeholder ─────────────────────────────────────────────────────── */
 .map-placeholder {
   background: var(--cafe-light);
@@ -231,10 +232,10 @@ body {
   min-height: 220px;
   border: 2px dashed var(--cafe-gold);
 }
-
+ 
 /* ── Footer ──────────────────────────────────────────────────────────────── */
 .footer { background-color: var(--cafe-dark); }
-
+ 
 /* ── Fade-in animation ───────────────────────────────────────────────────── */
 .fade-in {
   opacity: 0;
@@ -245,7 +246,7 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
+ 
 /* ── Responsive tweaks ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero { min-height: 85vh; }
