@@ -171,6 +171,7 @@ body {
   padding: 0.6rem 1.2rem;
   background: transparent !important;
   transition: color 0.2s, border-color 0.2s;
+  opacity: 1 !important; visibility: visible !important;
 }
 .menu-tabs .nav-link:hover { color: var(--cafe-brown); }
 .menu-tabs .nav-link.active {
