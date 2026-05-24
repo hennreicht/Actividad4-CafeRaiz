@@ -1,0 +1,253 @@
+/* ── Variables ──────────────────────────────────────────────────────────── */
+:root {
+  --cafe-brown:  #6B3F2A;
+  --cafe-cream:  #F5ECD7;
+  --cafe-gold:   #C9A84C;
+  --cafe-dark:   #2C1A0E;
+  --cafe-light:  #EDE0C8;
+  --grey-mid:    #888888;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────────────────── */
+#navbar {
+  background-color: var(--cafe-dark);
+  transition: background 0.3s, box-shadow 0.3s;
+  padding: 0.75rem 0;
+}
+#navbar.scrolled {
+  background-color: rgba(44, 26, 14, 0.97);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.navbar-brand { color: var(--cafe-gold) !important; letter-spacing: 0.5px; }
+.nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #fff !important;
+  background: rgba(201, 168, 76, 0.2);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.btn-cafe {
+  background-color: var(--cafe-brown);
+  border-color: var(--cafe-brown);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-cafe:hover {
+  background-color: #8a5236;
+  border-color: #8a5236;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.btn-outline-cafe {
+  border: 2px solid var(--cafe-brown);
+  color: var(--cafe-brown);
+  font-weight: 600;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.2s;
+}
+.btn-outline-cafe:hover {
+  background: var(--cafe-brown);
+  color: #fff;
+}
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--cafe-dark) 0%, var(--cafe-brown) 60%, #8a5236 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 26, 14, 0.35);
+}
+.hero-content { max-width: 700px; padding: 2rem; }
+.hero-tag {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cafe-gold);
+  font-weight: 600;
+}
+
+/* ── Page header (inner pages) ───────────────────────────────────────────── */
+.page-header {
+  min-height: 260px;
+  padding-top: 80px;
+  background: linear-gradient(135deg, var(--cafe-dark) 0%, var(--cafe-brown) 100%);
+}
+
+/* ── Section tag ─────────────────────────────────────────────────────────── */
+.section-tag {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cafe-gold);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Backgrounds ─────────────────────────────────────────────────────────── */
+.bg-cream { background-color: var(--cafe-cream); }
+
+/* ── Feature cards ───────────────────────────────────────────────────────── */
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(107,63,42,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(107,63,42,0.14);
+}
+.feature-icon { font-size: 2.5rem; }
+
+/* ── About image placeholder ─────────────────────────────────────────────── */
+.about-img-placeholder {
+  background: var(--cafe-light);
+  border-radius: 16px;
+  min-height: 320px;
+  border: 2px dashed var(--cafe-gold);
+}
+
+/* ── Product cards ───────────────────────────────────────────────────────── */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(107,63,42,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(107,63,42,0.16);
+}
+.product-img {
+  background: var(--cafe-cream);
+  height: 150px;
+}
+.price {
+  font-weight: 700;
+  color: var(--cafe-brown);
+  font-size: 1rem;
+}
+
+/* ── Menu tabs ───────────────────────────────────────────────────────────── */
+.menu-tabs { border-bottom: 2px solid var(--cafe-light); }
+.menu-tabs .nav-link {
+  color: var(--grey-mid);
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 0.6rem 1.2rem;
+  background: transparent !important;
+  transition: color 0.2s, border-color 0.2s;
+}
+.menu-tabs .nav-link:hover { color: var(--cafe-brown); }
+.menu-tabs .nav-link.active {
+  color: var(--cafe-brown) !important;
+  border-bottom-color: var(--cafe-brown);
+  background: transparent !important;
+}
+
+/* ── Mission/Vision cards ────────────────────────────────────────────────── */
+.mv-card {
+  background: #fff;
+  border-radius: 12px;
+  border-left: 4px solid var(--cafe-brown);
+  box-shadow: 0 2px 12px rgba(107,63,42,0.07);
+}
+.mv-icon { font-size: 2rem; }
+
+/* ── Value cards ─────────────────────────────────────────────────────────── */
+.value-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(107,63,42,0.07);
+  transition: transform 0.2s;
+}
+.value-card:hover { transform: translateY(-3px); }
+.value-icon { font-size: 2rem; }
+
+/* ── CTA section ─────────────────────────────────────────────────────────── */
+.cta-section {
+  background: linear-gradient(135deg, var(--cafe-dark) 0%, var(--cafe-brown) 100%);
+}
+
+/* ── Contact form ────────────────────────────────────────────────────────── */
+.form-control-cafe {
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  padding: 0.65rem 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-control-cafe:focus {
+  border-color: var(--cafe-brown);
+  box-shadow: 0 0 0 3px rgba(107,63,42,0.1);
+  outline: none;
+}
+
+/* ── Contact info card ───────────────────────────────────────────────────── */
+.contact-info-card {
+  background: var(--cafe-cream);
+  border-radius: 12px;
+}
+.contact-icon { font-size: 1.4rem; }
+
+/* ── Map placeholder ─────────────────────────────────────────────────────── */
+.map-placeholder {
+  background: var(--cafe-light);
+  border-radius: 12px;
+  min-height: 220px;
+  border: 2px dashed var(--cafe-gold);
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.footer { background-color: var(--cafe-dark); }
+
+/* ── Fade-in animation ───────────────────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive tweaks ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero { min-height: 85vh; }
+  .page-header { min-height: 200px; }
+  .menu-tabs .nav-link { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+}
