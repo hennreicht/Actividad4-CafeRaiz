@@ -163,7 +163,7 @@ body {
 /* ── Menu tabs ───────────────────────────────────────────────────────────── */
 .menu-tabs { border-bottom: 2px solid var(--cafe-light); }
 .menu-tabs .nav-link {
-  color: var(--grey-mid);
+  color: #555555;
   font-weight: 600;
   border: none;
   border-bottom: 3px solid transparent;
